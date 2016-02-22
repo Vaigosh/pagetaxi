@@ -1,0 +1,23 @@
+/* Add here all your css styles (customizations) */
+.navbar-brand {
+	padding-top: 0;
+}
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+#intro > div {
+	max-height: 100% !important;
+	height:100%;
+	overflow: visible;
+}
+body {
+	background-color: #fff;
+}
+.left {
+	float: left;
+}
+.right {
+	float: right;
+}
