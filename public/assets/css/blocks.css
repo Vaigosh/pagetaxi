@@ -1596,6 +1596,7 @@
 ------------------------------------*/
 .portfolio-box-v1 {
   margin: 0;
+  background-color: black;
 }
 
 .portfolio-box-v1 [class^="col-"] {
@@ -1613,7 +1614,7 @@
   top: 0;
   left: 0;
   width: 100%;
-  height: 100%;
+  height: 85%;
   content: " ";
   position: absolute;
 }

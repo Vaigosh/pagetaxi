@@ -14,7 +14,6 @@
                     <li data-transition="curtain-1" data-slotamount="5" data-masterspeed="700" data-title="Slide 1">
                         <!-- MAIN IMAGE -->
                         <video id="video" width="100%" height="auto" autoplay="autoplay" loop="loop" preload="auto">
-                            <source src="{{ asset('assets/video/v1.flv') }}" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></source>
                             <source src="{{ asset('assets/video/v1.mp4') }}" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"></source>
                         </video>
                        <!--  <img src="{{ asset('assets/img/bg/bg11.jpg') }}" alt="slidebg1" data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat"> -->
@@ -151,12 +150,12 @@
                 <div class="col-md-6">
                     <img class="img-responsive" src="{{ asset('assets/img/phones.jpg') }}" alt="">
                     <div class="col-xs-12 col-sm-6 buttons">
-                        <a class="right" href="https://itunes.apple.com/ru/app/taksi-online-zakaz-taksi/id969442902?mt=8">
+                        <a href="https://itunes.apple.com/ru/app/taksi-online-zakaz-taksi/id969442902?mt=8">
                             <img src="{{ asset('assets/img/icons/btn_dwnl_apple.png') }}" alt="Установить через AppStore">
                         </a>
                     </div>
                     <div class="col-xs-12 col-sm-6 buttons">
-                        <a class="left" href="https://play.google.com/store/apps/details?id=ru.tt.taxionline.clientapp">
+                        <a href="https://play.google.com/store/apps/details?id=ru.tt.taxionline.clientapp">
                             <img src="{{ asset('assets/img/icons/btn_dwnl_android.png') }}" alt="Установить через GooglePlay">
                         </a>
                     </div>
@@ -219,292 +218,42 @@
             </div>
         </div>
 
-        <ul class="list-unstyled row portfolio-box-v1">
-            <li class="col-sm-4">
-                <img class="img-responsive" src="assets/img/mockup/img1.jpg" alt="">
-                <div class="portfolio-box-v1-in">
-                    <h3>Collective Package</h3>
-                    <p>Web Design, Mock-up</p>
-                    <a class="btn-u btn-u-sm btn-brd btn-brd-hover btn-u-light" href="#">Read More</a>
-                </div>
-            </li>
-            <li class="col-sm-4">
-                <img class="img-responsive" src="assets/img/mockup/img2.jpg" alt="">
-                <div class="portfolio-box-v1-in">
-                    <h3>Ahola Company</h3>
-                    <p>Brand Design, UI</p>
-                    <a class="btn-u btn-u-sm btn-brd btn-brd-hover btn-u-light" href="#">Read More</a>
-                </div>
-            </li>
-            <li class="col-sm-4">
-                <img class="img-responsive" src="assets/img/mockup/img4.jpg" alt="">
-                <div class="portfolio-box-v1-in">
-                    <h3>Allan Project</h3>
-                    <p>Web Development, HTML5</p>
-                    <a class="btn-u btn-u-sm btn-brd btn-brd-hover btn-u-light" href="#">Read More</a>
-                </div>
-            </li>
-        </ul>
+        <div class="owl-carousel">
+            <div class="item-video" data-merge="3">
+                <video controls class="img-responsive" width="100%" height="auto" preload="auto">
+                  <source src="{{ asset('assets/video/tmp/discount.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item-video" data-merge="1">
+                <video controls class="img-responsive" width="100%" height="auto" preload="auto">
+                  <source src="{{ asset('assets/video/tmp/24.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item-video" data-merge="2">
+                <video controls class="img-responsive" width="100%" height="auto" preload="auto">
+                  <source src="{{ asset('assets/video/ledency.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="item-video" data-merge="1">
+                <video controls class="img-responsive" width="100%" height="auto" preload="auto">
+                  <source src="{{ asset('assets/video/sp.mp4') }}" type="video/mp4">
+                  Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
     </section>
     <!-- End Services Section -->
 
     <!-- News Section -->
-    <section id="news" class="news-section">
-        <div class="container content-lg">
-            <div class="title-v1">
-                <h2>Новости</h2>
-                <p>События, акции, мероприятия.</p>
-            </div>
-
-            <div class="row news-v1">
-                <div class="col-md-4 md-margin-bottom-40">
-                    <div class="news-v1-in">
-                        <img class="img-responsive" src="{{ asset('assets/img/contents/img1.jpg') }}" alt="">
-                        <h3><a href="#">Копите баллы и получайте бесплатные поездки</a></h3>
-                        <p>Получайте баллы с каждой поездки. Накопив достаточное количество Вы можете их использовать и осуществить бесплатную поездку!</p>
-                        <ul class="list-inline news-v1-info">
-                            <li><span>Опубликовано:</span> <a href="#">Бешига Любовь</a></li>
-                            <li>|</li>
-                            <li><i class="fa fa-clock-o"></i> Январь 15, 2016</li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 14</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4 md-margin-bottom-40">
-                    <div class="news-v1-in">
-                        <img class="img-responsive" src="{{ asset('assets/img/contents/img4.jpg') }}" alt="">
-                        <h3><a href="#">We build your website to realise your vision and best product</a></h3>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-                        <ul class="list-inline news-v1-info">
-                            <li><span>By</span> <a href="#">John Clarck</a></li>
-                            <li>|</li>
-                            <li><i class="fa fa-clock-o"></i> July 02, 2014</li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 07</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="news-v1-in">
-                        <img class="img-responsive" src="{{ asset('assets/img/contents/img3.jpg') }}" alt="">
-                        <h3><a href="#">Focused on helping our clients to build a successful business</a></h3>
-                        <p>At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores.</p>
-                        <ul class="list-inline news-v1-info">
-                            <li><span>By</span> <a href="#">Tina Kruiger</a></li>
-                            <li>|</li>
-                            <li><i class="fa fa-clock-o"></i> July 02, 2014</li>
-                            <li class="pull-right"><a href="#"><i class="fa fa-comments-o"></i> 22</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="parallax-twitter parallaxBg">
-            <div class="container parallax-twitter-in">
-                <div class="margin-bottom-30">
-                    <i class="icon-custom rounded-x icon-bg-blue fa fa-twitter"></i>
-                </div>
-
-                <div class="row">
-                    <div class="col-md-8 col-md-offset-2">
-                        <ul class="list-unstyled owl-twitter-v1">
-                            <li class="item">
-                                <p>Желтая «шашечка», <br>
-                                    Резвый сигнал. <br>
-                                    Для пассажиров <br>
-                                    Другом он стал.<p>
-                            </li>
-                            <li class="item">
-                                <p>В курсе событий <br>
-                                    Везде и всегда. <br>
-                                    Мчится на вызов <br>
-                                    В жару, в холода.</p>
-                            </li>
-                            <li class="item">
-                                <p>Знаки дорожные <br>
-                                    Знает он все. <br>
-                                    Пусть же сопутствует <br>
-                                    В жизни успех!</p>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+    {!! Widget::RecentNews() !!}
     <!-- End News Section -->
 
-    <!-- Portfolio Section -->
-    <section id="portfolio" class="about-section">
-        <div class="container content-lg">
-            <div class="title-v1">
-                <h2>Фотографии с мероприятий</h2>
-                <p>Тут Вы можете найти свои фотографии, если участвывали в наших мероприятиях.</p>
-            </div>
-
-
-            <div class="cube-portfolio">
-                <div id="filters-container" class="cbp-l-filters-button">
-                    <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Все </div>
-                    <div data-filter=".print" class="cbp-filter-item"> 2016 </div>
-                    <div data-filter=".web-design" class="cbp-filter-item"> 2015 </div>
-                    <div data-filter=".motion" class="cbp-filter-item"> 2014 </div>
-                </div><!--/end Filters Container-->
-
-                <div id="grid-container" class="cbp-l-grid-gallery">
-                    <div class="cbp-item web-design motion">
-                        <a href="{{ asset('assets/ajax/project1.html') }}" class="cbp-caption cbp-singlePageInline"
-                           data-title="World Clock Widget<br>by Paul Flavius Nechita">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="{{ asset('assets/img/portfolio/a1/5.jpg') }}" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">День рыбака без табака</div>
-                                        <div class="cbp-l-caption-desc">Под таким лозунгом мы провели мероприятие от нашей диспетчерской службы заказа Такси 24.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design">
-                        <a href="assets/ajax/project2.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Bolt UI<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="{{ asset('assets/img/portfolio/a2/image5.jpg') }}" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">День рождения Такси 24</div>
-                                        <div class="cbp-l-caption-desc">Нам 4 года.</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design motion">
-                        <a href="assets/ajax/project3.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="WhereTO App<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="{{ asset('assets/img/portfolio/a3/IMG_1984.jpg') }}" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">9 мая</div>
-                                        <div class="cbp-l-caption-desc">Мы помним наших героев</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design print">
-                        <a href="assets/ajax/project4.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="iDevices<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/11.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">iDevices</div>
-                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item motion">
-                        <a href="assets/ajax/project5.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Seemple* Music for iPad<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/5.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Seemple* Music for iPad</div>
-                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item print motion">
-                        <a href="assets/ajax/project6.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Remind~Me Widget<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/6.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Remind~Me Widget</div>
-                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item web-design print">
-                        <a href="assets/ajax/project7.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Workout Buddy<br>by Tiberiu Neamu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/7.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Workout Buddy</div>
-                                        <div class="cbp-l-caption-desc">by Tiberiu Neamu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item print">
-                        <a href="assets/ajax/project8.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Digital Menu<br>by Cosmin Capitanu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/8.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Digital Menu</div>
-                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="cbp-item motion">
-                        <a href="assets/ajax/project9.html" class="cbp-caption cbp-singlePageInline"
-                           data-title="Holiday Selector<br>by Cosmin Capitanu">
-                            <div class="cbp-caption-defaultWrap">
-                                <img src="assets/img/portfolio/4.jpg" alt="">
-                            </div>
-                            <div class="cbp-caption-activeWrap">
-                                <div class="cbp-l-caption-alignLeft">
-                                    <div class="cbp-l-caption-body">
-                                        <div class="cbp-l-caption-title">Holiday Selector</div>
-                                        <div class="cbp-l-caption-desc">by Cosmin Capitanu</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                </div>
-
-                <div class="cbp-l-loadMore-button">
-                    <a href="assets/ajax/loadMore.html" class="cbp-l-loadMore-button-link">LOAD MORE</a>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- End Portfolio Section -->
+    <!-- Event Section -->
+    {!! Widget::eventBlock() !!}
+    <!-- End Event Section -->
 
     <!-- Contact Section -->
     <section id="contact" class="contacts-section">
@@ -618,6 +367,23 @@
             OwlCarousel.initOwlCarousel();
             RevolutionSlider.initRSfullScreen();
         });
+        $('.owl-carousel').owlCarousel({
+            items:3,
+            merge:true,
+            loop:true,
+            margin:10,
+            video:true,
+            lazyLoad:true,
+            center:true,
+            responsive:{
+                480:{
+                    items:2
+                },
+                600:{
+                    items:4
+                }
+            }
+        })
     </script>
     <!--[if lt IE 9]>
         <script src="{{ asset('assets/plugins/respond.js') }}"></script>

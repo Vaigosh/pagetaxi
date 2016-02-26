@@ -28,10 +28,18 @@ Route::get('/', function () {
 
 Route::group(['middleware' => ['web']], function () {
     //
-});
-
-Route::group(['middleware' => 'web'], function () {
     Route::auth();
-
     Route::get('/home', 'HomeController@index');
+    Route::resource('news','NewsController');
+    Route::resource('event','EventController');
+    Route::get('newscontrol',['as' => 'newscontrol', 'uses' => 'NewsController@control']);
+    Route::get('eventcontrol',['as' => 'eventcontrol', 'uses' => 'EventController@control']);
 });
+
+/*
+Route::resource('photo', 'PhotoController',
+                ['only' => ['index', 'show']]);
+
+Route::resource('photo', 'PhotoController',
+                ['except' => ['create', 'store', 'update', 'destroy']]);
+*/
