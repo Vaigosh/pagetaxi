@@ -3,6 +3,7 @@
 namespace App\Model;
 
 use Illuminate\Database\Eloquent\Model;
+use Carbon\Carbon;
 
 class eventBlock_model extends Model
 {
@@ -24,5 +25,9 @@ class eventBlock_model extends Model
     }
     public function setPublishedAtAttribute($date) {
         $this->attributes['published_at'] = Carbon::parse($date);
+    }
+    public function user()
+    {
+        return $this->belongsTo('App\User');
     }
 }

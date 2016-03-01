@@ -32,6 +32,7 @@ Route::group(['middleware' => ['web']], function () {
     Route::get('/home', 'HomeController@index');
     Route::resource('news','NewsController');
     Route::resource('event','EventController');
+    Route::resource('gallery','PhotoGalleryController');
     Route::get('newscontrol',['as' => 'newscontrol', 'uses' => 'NewsController@control']);
     Route::get('eventcontrol',['as' => 'eventcontrol', 'uses' => 'EventController@control']);
 });

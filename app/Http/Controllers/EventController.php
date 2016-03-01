@@ -41,7 +41,7 @@ class EventController extends Controller
         //
         $event_block = $request->all();
         //$event_block['user_id'] = \Session::get('userId');
-        $event_block = new eventBlock_model($news);
+        $event_block = new eventBlock_model($event_block);
         $event_block->save();
         //flash()->success('Новость успешно создана!');
         return redirect('event');

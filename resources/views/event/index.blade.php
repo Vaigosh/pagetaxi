@@ -8,25 +8,25 @@
     <div class="breadcrumbs-v1">
         <div class="container">
             <span>Такси 24</span>
-            <h1>Новости</h1>
+            <h1>Мероприятия</h1>
         </div>
     </div>
     <div class="container content-md">
         <!-- News v3 -->
-        @foreach($news as $sh_news)
+        @foreach($event_block as $event)
             <div class="row margin-bottom-20">
                 <div class="col-sm-5 sm-margin-bottom-20">
-                    <img class="img-responsive" src="{{ $sh_news->img_path }}" alt="">
+                    <img class="img-responsive" src="{{ $event->img_path }}" alt="">
                 </div>
                 <div class="col-sm-7">
                     <div class="news-v3">
                         <ul class="list-inline posted-info">
                             <li>Добавил(а):</li>
                             <li>Бешига Любовь</li>
-                            <li>{{ $sh_news->published_at }}</li>
+                            <li>{{ $event->published_at }}</li>
                         </ul>
-                        <h2><a href="/news/{{ $sh_news->id }}">{{ $sh_news->title }}</a></h2>
-                        <p>{{ $sh_news->text }}</p>
+                        <h2><a href="/event/{{ $event->id }}">{{ $event->title }}</a></h2>
+                        <p>{{ $event->text }}</p>
                         <ul class="post-shares">
                             <li>
                                 <a href="#">

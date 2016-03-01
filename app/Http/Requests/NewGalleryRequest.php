@@ -4,7 +4,7 @@ namespace App\Http\Requests;
 
 use App\Http\Requests\Request;
 
-class EventRequest extends Request
+class NewGalleryRequest extends Request
 {
     /**
      * Determine if the user is authorized to make this request.
@@ -24,11 +24,8 @@ class EventRequest extends Request
     public function rules()
     {
         return [
-            //
-            'title' => 'required|min:5',
-            'img_path' => 'required',
-            'text'  => 'required',
-            'published_at'  => 'required|date',
+            'name' => 'required|min:5',
+            'description'  => 'required',
         ];
     }
 }
