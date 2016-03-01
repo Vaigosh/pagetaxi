@@ -22,6 +22,11 @@ class PhotoGalleryController extends Controller
     {
     	return view('gallery.create');
     }
+    public function show($id)
+    {
+    	$gallery = Gallery::with('photos')->findOrFail($id);
+    	return view('gallery.show', compact('gallery'));
+    }
     public function store(NewGalleryRequest $request) 
     {
         $gallerys = $request->all();

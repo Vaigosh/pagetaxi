@@ -57,6 +57,8 @@
         <script src="{{ asset('assets/js/html5.js') }}"></script>
         <script src="{{ asset('assets/js/respond.min.js') }}"></script>
     <![endif]-->
+    @section('cstyle') 
+    @show 
 </head>
 <body id="body app-layout" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
 

@@ -30,4 +30,8 @@ class eventBlock_model extends Model
     {
         return $this->belongsTo('App\User');
     }
+    public function galler()
+    {
+        return $this->HasOne('App\Model\Gallery');
+    }
 }
