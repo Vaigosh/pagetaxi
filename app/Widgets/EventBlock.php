@@ -5,6 +5,7 @@ namespace App\Widgets;
 use Arrilot\Widgets\AbstractWidget;
 use App\Model\eventBlock_model;
 use App\Model\Gallery;
+use App\Model\Photo;
 use Carbon\Carbon;
 
 class EventBlock extends AbstractWidget
@@ -24,7 +25,7 @@ class EventBlock extends AbstractWidget
     {
         //
         $data['event_block'] = eventBlock_model::all();
-        $data['gallerys'] = Gallery::all();
+        $data['photos'] = Photo::all();
         Carbon::setToStringFormat('jS \o\f F, Y');
         return view("widgets.event_block", [
             'config' => $this->config,

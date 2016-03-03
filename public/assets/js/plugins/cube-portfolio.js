@@ -59,7 +59,7 @@
 
             })
             .fail(function() {
-                t.updateSinglePageInline("Error! Please refresh the page!");
+                t.updateSinglePageInline("Ошибка! Попробуйте обновить страницу!");
             });
 
         }
@@ -108,7 +108,7 @@
 
         // set loading status
         oMsg = me.text();
-        me.text('LOADING...');
+        me.text('ЗАГРУЗКА...');
 
         // perform ajax request
         $.ajax({
@@ -135,7 +135,7 @@
                     });
 
                     if (itemsNext.length === 0) {
-                        me.text('NO MORE WORKS');
+                        me.text('ПОКАЗАНЫ ВСЕ МЕРОПРИЯТИЯ');
                         me.addClass('cbp-l-loadMore-button-stop');
                     }
 

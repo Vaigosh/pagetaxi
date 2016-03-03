@@ -14,7 +14,8 @@ class eventBlock_model extends Model
     	'text',
     	'img_path',
     	'published_at',
-    	'filter_id'
+    	'filter_id',
+        'gallery_id'
     ];
     protected   $dates = ['published_at'];
     public function scopePublished($query) {
@@ -30,8 +31,9 @@ class eventBlock_model extends Model
     {
         return $this->belongsTo('App\User');
     }
-    public function galler()
+    public function photo()
     {
-        return $this->HasOne('App\Model\Gallery');
+        return $this->hasMany('App\Model\Photo','gallery_id','gallery_id');
     }
+
 }

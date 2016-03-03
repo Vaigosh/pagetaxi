@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Session;
 use App\Http\Requests\EventRequest;
 use App\Model\eventBlock_model;
+use App\Model\Gallery;
 use App\User;
 
 class EventController extends Controller
@@ -56,10 +57,19 @@ class EventController extends Controller
     public function show($id)
     {
         //
-        $event_block = eventBlock_model::findOrFail($id);
+        $event_block = eventBlock_model::with('photo')->findOrFail($id);
+        //$event_block['photo'] = $event_block->photo()->get();
+        //$event_block['gallery'] = Gallery::with('photos')->findOrFail($event_block->gallery_id);
+        //dd($event_block);
+        //$event_block['gallery'] = Gallery::with('photos')->where('id', $event_block->gallery_id);
         return view('event.show', compact('event_block'));
     }
 
+    public function single($id)
+    {
+        $event_block = eventBlock_model::with('photo')->findOrFail($id);
+        return view('event.single', compact('event_block'));
+    }
 
     public function control()
     {
