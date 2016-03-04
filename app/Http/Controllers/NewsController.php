@@ -39,7 +39,7 @@ class NewsController extends Controller
     public function store(NewsRequest $request)
     {
         //
-        dd($news);
+        //dd($news);
         $news = $request->all();
         //$news['user_id'] = \Session::get('userId');
         $news = new News($news);

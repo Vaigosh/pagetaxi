@@ -9,6 +9,7 @@ use Carbon\Carbon;
 use Session;
 use App\Http\Requests\NewGalleryRequest;
 use App\Model\Gallery;
+use App\Model\Photo;
 use App\User;
 
 class PhotoGalleryController extends Controller
@@ -29,12 +30,24 @@ class PhotoGalleryController extends Controller
     }
     public function store(NewGalleryRequest $request) 
     {
-        $gallerys = $request->all();
+        $gallery = Gallery::create($request->all());
+        //$gallerys = $request->all();
         //$news['user_id'] = \Session::get('userId');
-        $gallerys = new Gallery($gallerys);
-        $gallerys->save();
+        //$gallerys = new Gallery($gallerys);
+        //$gallerys->save();
         //flash()->success('Новость успешно создана!');
-        return redirect('gallery');
+        return redirect(route('gallery.show',$gallery->id));
+    }
+    public function upload_photo($id, NewGalleryRequest $request) 
+    {
+        $photo = $this->makePhoto($request->file('file'));
+        Gallery::find($id)->addPhoto($photo);
+
+        return "OK";
+    }
+    public function makePhoto(UploadedFile $file)
+    {
+        return Photo::named($file->getClientOriginalName())->move($file);
     }
     public function edit($id)
     {

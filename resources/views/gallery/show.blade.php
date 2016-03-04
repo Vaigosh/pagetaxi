@@ -3,6 +3,7 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/footers/footer-v1.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/plugins/dropzonejs/min/dropzone.min.css') }}">
 @endsection
 
 @section('navmenu')
@@ -13,7 +14,11 @@
     <div class="wrapper">
         <h1>{{ $gallery->name }}</h1>
         <hr />
-         <div class="cube-portfolio margin-bottom-20">
+        <form action="/gallery/{{ $gallery->id }}/upload_photo"
+            class="dropzone"
+            id="my-awesome-dropzone">
+        </form>
+        <div class="cube-portfolio margin-bottom-20">
             <div id="grid-container" class="cbp-l-grid-agency">
                 @if(count($gallery->photos))
                     @foreach($gallery->photos as $photo)
@@ -131,6 +136,7 @@
 <!-- JS Page Level -->
 <script type="text/javascript" src="{{ asset('assets/js/app.js') }}"></script>
 <script type="text/javascript" src="{{ asset('assets/js/plugins/cube-portfolio/cube-portfolio-3.js') }}"></script>
+<script type="text/javascript" src="{{ asset('assets/plugins/dropzonejs/min/dropzone.min.js') }}"></script>
 <script type="text/javascript">
     jQuery(document).ready(function() {
         App.init();

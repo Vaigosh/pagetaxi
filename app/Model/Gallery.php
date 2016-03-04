@@ -17,6 +17,6 @@ class Gallery extends Model
     }
     public function addPhoto(Photo $photo)
     {
-    	return $this->photos->save($photo);
+    	return $this->photos()->save($photo);
     }
 }

@@ -20,6 +20,20 @@
 	@include ('errors.list');
 	@if(count($gallerys))
 	    <div class="cube-portfolio margin-bottom-20">
+
+            <ul>
+               @foreach($gallerys as $gallery)
+                <li>
+                    <a href="/gallery/{{ $gallery->id }}" title="">
+                    @if(count($gallery->photos))
+                        <img src="{{ $gallery->photos[0]['path'] }}" width="200" alt="">
+                    @endif
+                    </a>
+                    <count>{{ count($gallery->photos) }} </count>
+                </li>
+                @endforeach
+            </ul>
+
 	        <div class="content-xs">
 	            <div id="filters-container" class="cbp-l-filters-text content-xs">
 	                <div data-filter="*" class="cbp-filter-item-active cbp-filter-item"> Все </div> |
