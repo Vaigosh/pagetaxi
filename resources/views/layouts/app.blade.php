@@ -6,11 +6,10 @@
     <!--[if IE]><meta http-equiv="X-UA-Compatible" content="IE=edge"><![endif]-->
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title> 
-        @section('title') 
-        @show 
+        {{ $page[0]->title or 'Такси 24 | Заказ такси в Астрахани.'}}
     </title>   
-    <meta name="description" content="">
-    <meta name="keywords" content="">
+    <meta name="description" content="{{ $page[0]->description or 'Заказать такси в Астрахани. Такси 24'}}">
+    <meta name="keywords" content="{{ $page[0]->keywords or 'Заказать такси, такси Астрахань, такси 24, 242424, Служба такси 24, Такси-24' }}">
     <!-- Icon -->
     <link rel="shortcut icon" href="{{ asset('assets/img/favicon.ico') }}">
     <link rel="apple-touch-icon" href="{{ asset('assets/img/apple-touch-icon.jpg') }}">
@@ -61,14 +60,16 @@
     @show 
 </head>
 <body id="body app-layout" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
-
+<div id="top"></div>
     @yield('navmenu')
 
     @yield('content')
-
+    
+    @yield('footer')
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="{{ asset('assets/plugins/back-to-top.js') }}"></script>
     @yield('scripts')
 </body>
 </html>

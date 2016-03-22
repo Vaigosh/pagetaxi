@@ -2,7 +2,7 @@
     <section id="portfolio" class="about-section">
         <div class="container content-lg">
             <div class="title-v1">
-                <h2>События и мероприятия</h2>
+                <a href="{{ url('/event') }}"><h2>События и мероприятия</h2></a>
                 <p>Тут Вы можете найти свои фотографии, если участвывали в наших мероприятиях.</p>
             </div>
 

@@ -14,6 +14,11 @@ use App\User;
 
 class PhotoGalleryController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('sentry.member:Admins', ['except' => ['index','show']]);
+    }
+
 	public function index() 
 	{
 		$gallerys = Gallery::all();

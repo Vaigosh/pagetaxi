@@ -5,19 +5,25 @@
 @show
 
 @section('content')
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1 class="pull-left">Новости</h1>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
 <div class="breadcrumbs">
     <div class="container">
         <h1 class="pull-left">{{ $news->title }}</h1>
         <ul class="pull-right breadcrumb">
-            <li><a href="/home">Главная</a></li>
+            <li><a href="/">Главная</a></li>
             <li><a href="/news">Новости</a></li>
-            <li class="active">$news->title</li>
+            <li class="active"><a href="/news/{{ $news->id }}">{{ $news->title }}</a></li>
         </ul>
     </div>
 </div>
 <div class="container content">
     <div class="row margin-bottom-20">
-        <h2>{{ $news->title }}</h2>
         <div class="col-sm-5 sm-margin-bottom-20">
             <img class="img-responsive" src="../{{ $news->img_path }}" alt="">
         </div>
@@ -43,82 +49,10 @@
         </div>
     </div><!--/end row-->
 </div>
+@endsection
 
-
-    <!-- Contact Section -->
-    <section id="contact" class="contacts-section">
-        <div class="container content-lg">
-            <div class="title-v1">
-                <h2>Наши контакты</h2>
-                <p>Вы всегда можете связаться с нами</p>
-            </div>
-
-            <div class="row contacts-in">
-                <div class="col-md-6 md-margin-bottom-40">
-                    <ul class="list-unstyled">
-                        <li><i class="fa fa-home"></i> ул. Богдана-Хмельницкого, дом. 10, корпус 1</li>
-                        <li><i class="fa fa-phone"></i> 8(512) 242423</li>
-                        <li><i class="fa fa-envelope"></i> <a href="mailto:eis-reklama@mail.ru">eis-reklama@mail.ru</a></li>
-                        <li><i class="fa fa-globe"></i> <a href="http://242424.рф">242424.рф</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-md-6">
-                    <form action="assets/php/sky-forms-pro/demo-contacts-process.php" method="post" id="sky-form3" class="sky-form contact-style">
-                        <fieldset>
-                            <label>Имя</label>
-                            <div class="row">
-                                <div class="col-md-7 margin-bottom-20 col-md-offset-0">
-                                    <div>
-                                        <input type="text" name="name" id="name" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label>Email <span class="color-red">*</span></label>
-                            <div class="row">
-                                <div class="col-md-7 margin-bottom-20 col-md-offset-0">
-                                    <div>
-                                        <input type="text" name="email" id="email" class="form-control">
-                                    </div>
-                                </div>
-                            </div>
-
-                            <label>Сообщение</label>
-                            <div class="row">
-                                <div class="col-md-11 margin-bottom-20 col-md-offset-0">
-                                    <div>
-                                        <textarea rows="8" name="message" id="message" class="form-control"></textarea>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <p><button type="submit" class="btn-u btn-brd btn-brd-hover btn-u-dark">Отправить сообщение</button></p>
-                        </fieldset>
-
-                        <div class="message">
-                            <i class="rounded-x fa fa-check"></i>
-                            <p>Ваше сообщение успешно отправлено!</p>
-                        </div>
-                    </form>
-                </div>
-            </div>
-        </div>
-
-        <div class="copyright-section">
-            <p>2016 &copy; Такси 24. All Rights Reserved.</a></p>
-            <ul class="social-icons">
-                <li><a href="#" data-original-title="Facebook" class="social_facebook rounded-x"></a></li>
-                <li><a href="#" data-original-title="Twitter" class="social_twitter rounded-x"></a></li>
-                <li><a href="#" data-original-title="Goole Plus" class="social_googleplus rounded-x"></a></li>
-                <li><a href="#" data-original-title="Pinterest" class="social_pintrest rounded-x"></a></li>
-                <li><a href="#" data-original-title="Linkedin" class="social_linkedin rounded-x"></a></li>
-            </ul>
-            <span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
-        </div>
-    </section>
-    <!-- End Contact Section -->
-
+@section('footer')
+    @include('layouts.footer')
 @endsection
 
 @section('scripts')

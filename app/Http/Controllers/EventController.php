@@ -10,10 +10,15 @@ use Session;
 use App\Http\Requests\EventRequest;
 use App\Model\eventBlock_model;
 use App\Model\Gallery;
+use App\Model\Pages;
 use App\User;
 
 class EventController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('sentry.member:Admins', ['except' => ['index','show','single']]);
+    }
     public function index()
     {
         $event_block = eventBlock_model::all();

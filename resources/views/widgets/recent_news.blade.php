@@ -2,7 +2,7 @@
     <section id="news" class="news-section">
         <div class="container content-lg">
             <div class="title-v1">
-                <h2>Новости</h2>
+                <a href="{{ url('/news') }}"><h2>Новости</h2></a>
                 <p>События, акции, мероприятия.</p>
             </div>
             <div class="row news-v1">

@@ -1,9 +1,29 @@
 @extends('layouts.app')
 
+@section('navmenu')
+    @include('layouts.navmenu')
+@show
+
 @section('content')
+<!--=== Breadcrumbs v3 ===-->
+<div class="breadcrumbs-v3 img-v3">
+    <div class="container text-center">
+        <h1 class="pull-left">Мероприятия</h1>
+    </div><!--/end container-->
+</div>
+<!--=== End Breadcrumbs v3 ===-->
+<div class="breadcrumbs">
+    <div class="container">
+        <h1 class="pull-left">{{ $event_block->title }}</h1>
+        <ul class="pull-right breadcrumb">
+            <li><a href="/">Главная</a></li>
+            <li><a href="/event">Мероприятия</a></li>
+            <li class="active"><a href="/event/{{ $event_block->id }}">{{ $event_block->title }}</a></li>
+        </ul>
+    </div>
+</div>
 <div class="container content">
     <div class="row margin-bottom-20">
-        <h2>{{ $event_block->title }}</h2>
         <div class="col-sm-5 sm-margin-bottom-20">
             <img class="img-responsive" src="../{{ $event_block->img_path }}" alt="">
         </div>
@@ -54,6 +74,11 @@
     @endif
 </div>
 @endsection
+
+@section('footer')
+    @include('layouts.footer')
+@endsection
+
 @section('scripts')
 <!-- JS Global Compulsory -->
 <script type="text/javascript" src="{{ asset('assets/plugins/jquery/jquery.min.js') }}"></script>

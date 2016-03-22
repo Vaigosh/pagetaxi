@@ -9,14 +9,24 @@ use Carbon\Carbon;
 use Session;
 use App\Http\Requests\NewsRequest;
 use App\Model\News;
+use App\Model\Pages;
 use App\User;
+use App\Model\Group;
 
 class NewsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('sentry.member:Admins', ['except' => ['index','show']]);
+    }
     public function index()
     {
+        //$page = Pages::where('name','=','news')->get();
         $news = News::all();
-        return view('news.index', compact('news'));
+        //$user = User::find(1)->groups()->get();
+
+        //dd($user[0]->title);
+        return view('news.index', compact('news','page'));
     }
 
     /**
@@ -38,7 +48,6 @@ class NewsController extends Controller
      */
     public function store(NewsRequest $request)
     {
-        //
         //dd($news);
         $news = $request->all();
         //$news['user_id'] = \Session::get('userId');

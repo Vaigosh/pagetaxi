@@ -33,10 +33,6 @@ class Kernel extends HttpKernel
 
         'api' => [
             'throttle:60,1',
-        ],
-        'admin' => [
-            'web',
-            'auth',
         ]
     ];
 
@@ -47,10 +43,16 @@ class Kernel extends HttpKernel
      *
      * @var array
      */
-    protected $routeMiddleware = [
+/*    protected $routeMiddleware = [
         'auth' => \App\Http\Middleware\Authenticate::class,
         'auth.basic' => \Illuminate\Auth\Middleware\AuthenticateWithBasicAuth::class,
         'guest' => \App\Http\Middleware\RedirectIfAuthenticated::class,
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
+    ];*/
+    protected $routeMiddleware = [
+        'sentry.auth' => \Sentinel\Middleware\SentryAuth::class,
+        'sentry.admin' => \Sentinel\Middleware\SentryAdminAccess::class,
+        'sentry.member' => \Sentinel\Middleware\SentryMember::class,
+        'sentry.guest' => \Sentinel\Middleware\SentryGuest::class,
     ];
 }

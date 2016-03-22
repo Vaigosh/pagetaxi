@@ -5,6 +5,24 @@
 @show
 
 @section('content')
+    <!--=== Breadcrumbs v3 ===-->
+    <div class="breadcrumbs-v3 img-v3">
+        <div class="container text-center">
+            <h1 class="pull-left">События и мероприятия</h1>
+        </div><!--/end container-->
+    </div>
+    <!--=== End Breadcrumbs v3 ===-->
+    <div class="breadcrumbs">
+        <div class="container">
+            <h1 class="pull-left">События и мероприятия</h1>
+            <ul class="pull-right breadcrumb">
+                <li><a href="/">Главная</a></li>
+                <li><a href="/event">Мероприятия</a></li>
+                <li class="active"><a href="/event/create">Добавить мероприятие</a></li>
+            </ul>
+        </div>
+    </div>
+
     <div>
         <h1>Добавить новость</h1>
             <hr />
@@ -87,7 +105,7 @@
                 <li><a href="#" data-original-title="Pinterest" class="social_pintrest rounded-x"></a></li>
                 <li><a href="#" data-original-title="Linkedin" class="social_linkedin rounded-x"></a></li>
             </ul>
-            <span class="page-scroll"><a href="#intro"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
+            <span class="page-scroll"><a href="#top"><i class="fa fa-angle-double-up back-to-top"></i></a></span>
         </div>
     </section>
     <!-- End Contact Section -->
