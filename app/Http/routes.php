@@ -34,4 +34,8 @@ Route::group(['middleware' => ['web']], function () {
     Route::resource('event','EventController');
     Route::resource('gallery','PhotoGalleryController');
     Route::get('single/{id}',['uses' => 'EventController@single']);
+    Route::resource('dashboard','DashboardController');
+    Route::get('event/destroy/{id}',['uses' => 'EventController@destroy']);
+    Route::get('news/destroy/{id}',['uses' => 'NewsController@destroy']);
+    Route::get('gallery/destroy/{id}',['uses' => 'PhotoGalleryController@destroy']);
 });

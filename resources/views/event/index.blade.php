@@ -37,16 +37,6 @@
                         </ul>
                         <h2><a href="/event/{{ $event->id }}">{{ $event->title }}</a></h2>
                         <p>{{ $event->text }}</p>
-                        <ul class="post-shares">
-                            <li>
-                                <a href="#">
-                                    <i class="rounded-x icon-speech"></i>
-                                    <span>5</span>
-                                </a>
-                            </li>
-                            <li><a href="#"><i class="rounded-x icon-share"></i></a></li>
-                            <li><a href="#"><i class="rounded-x icon-heart"></i></a></li>
-                        </ul>
                     </div>
                 </div>
             </div><!--/end row-->
@@ -54,14 +44,6 @@
         <!-- End News v3 -->
         
         <div class="clearfix margin-bottom-20"><hr></div>
-
-        <!-- Pager v3 -->
-        <ul class="pager pager-v3 pager-md no-margin-bottom">
-            <li class="previous"><a href="#">← Older</a></li>
-            <li class="page-amount">1 of 7</li>
-            <li class="next"><a href="#">Newer →</a></li>
-        </ul>
-        <!-- End Pager v3 -->
     </div>
 @endsection
 
