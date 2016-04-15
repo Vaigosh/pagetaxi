@@ -2,7 +2,6 @@
 @section('cstyle')
     <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/custom/custom-cubeportfolio.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/footers/footer-v1.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/dropzonejs/min/dropzone.min.css') }}">
 @endsection
 

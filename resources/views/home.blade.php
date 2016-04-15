@@ -2,7 +2,7 @@
 
 @section('navmenu')
     @include('layouts.navmenu')
-@show
+@stop
 
 @section('content')
     <!-- Intro Section -->

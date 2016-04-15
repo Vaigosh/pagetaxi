@@ -46,6 +46,9 @@
                                 </a>
 
                                 <ul class="dropdown-menu" role="menu">
+                                @if(Sentry::getUser()->email == 'eis-reklama@mail.ru')
+                                    <li><a href="{{ url('/dashboard') }}"><i class="fa fa-btn fa-dashboard"></i>Управление</a></li>
+                                @endif
                                     <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Выход</a></li>
                                 </ul>
                             </li>

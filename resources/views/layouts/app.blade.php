@@ -16,16 +16,8 @@
     <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('assets/img/apple-touch-icon-72x72.jpg') }}">
     <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('assets/img/apple-touch-icon-114x114.jpg') }}">
     <!-- Fonts -->
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css" rel='stylesheet' type='text/css'>
-    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700" rel='stylesheet' type='text/css'>
     <!-- Styles -->
-    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" rel="stylesheet">
-    {{-- <link href="{{ elixir('css/app.css') }}" rel="stylesheet"> --}}
-    <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.min.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{{ asset('assets/css/font-awesome.min.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{{ asset('assets/css/font-lineicons.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/css/animate.css') }}" type="text/css" media="all" />
-    <link rel="stylesheet" href="{{ asset('assets/css/toastr.min.css') }}" type="text/css" media="all" />
     <link rel="stylesheet" href="{{ asset('assets/plugins/pace/pace-flash.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/owl-carousel/owl.carousel.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/plugins/cube-portfolio/cubeportfolio/css/cubeportfolio.min.css') }}">
@@ -33,31 +25,16 @@
     <link rel="stylesheet" href="{{ asset('assets/plugins/revolution-slider/rs-plugin/css/settings.css') }}" type="text/css" media="screen">
     <!--[if lt IE 9]><link rel="stylesheet" href="{{ asset('assets/plugins/revolution-slider/rs-plugin/css/settings-ie8.css') }}" type="text/css" media="screen"><![endif]-->
 
-    <!-- Style Switcher -->
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins/style-switcher.css') }}">
-
-    <!-- CSS Theme -->
-    <link rel="stylesheet" href="{{ asset('assets/css/theme-colors/default.css') }}" id="style_color">
-
     <!-- CSS Global Compulsory -->
-    <link rel="stylesheet" href="{{ asset('assets/css/one.style.css') }}">
-
-    <!-- CSS Page Style -->
-    <link rel="stylesheet" href="{{ asset('assets/css/pages/page_log_reg_v2.css') }}">
-
-    <!-- CSS Footer -->
-    <link rel="stylesheet" href="{{ asset('assets/css/footers/footer-v7.css') }}">
+    <link rel="stylesheet" href="{{ asset('assets/css/all.css') }}">
 
     <!-- CSS Customization -->
-    <link rel="stylesheet" href="{{ asset('assets/css/custom.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/plugins.css') }}">
-    <link rel="stylesheet" href="{{ asset('assets/css/style.css') }}" type="text/css" media="all" />
+    <link rel="stylesheet" href="{{ asset('assets/css/app.css') }}">
     <!--[if lt IE 9]>
         <script src="{{ asset('assets/js/html5.js') }}"></script>
         <script src="{{ asset('assets/js/respond.min.js') }}"></script>
     <![endif]-->
-    @section('cstyle') 
-    @show 
+    @yield('cstyle') 
 </head>
 <body id="body app-layout" data-spy="scroll" data-target=".one-page-header" class="demo-lightbox-gallery">
 <div id="top"></div>
